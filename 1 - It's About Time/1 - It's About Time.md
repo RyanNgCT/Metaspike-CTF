@@ -6,6 +6,12 @@ You have received the email below in connection with a legal action. The timing 
 
 Enter L for legitimate, F for fake. More to come based on your answer.
 
+
+### Approach
+
+We can first use mxtoolbox to analyse the headers after opening them in thunderbird. [The results](https://mxtoolbox.com/Public/Tools/EmailHeaders.aspx?huid=ed4f311b-4617-4f3d-a20a-2e857063375e) show that `DKIM-Signature Body Hash Not Verified`. After some exploration, I discovered this means that the computed hash does not match the `bh=` field, which suggests that the email might have been modified during transit.
+
+
 ---
 
 ## Part 2
